@@ -10,13 +10,13 @@ An enhanced yet simplified version of the original RISC-V Computer
 	4. Redesigned I/O Interface 
 
 Table of contents
-	1. [Motivation](#motivation)
-	2. [CPU](#cpu)
-	3. [Memory](#memory)
-	4. [DMA (Direct Memory Access)](#dma)
-	5. [PIA (Peripheral Interface Adapter)](#pia)
-	6. [Memory map](#mmap)
-	7. [Loading a program](#program)
+	1. [Motivation](#motivation)<br />
+	2. [CPU](#cpu)<br />
+	3. [Memory](#memory)<br />
+	4. [DMA (Direct Memory Access)](#dma)<br />
+	5. [PIA (Peripheral Interface Adapter)](#pia)<br />
+	6. [Memory map](#mmap)<br />
+	7. [Loading a program](#program)<br />
 
 ## Motivation <a name="motivation"></a>
 
