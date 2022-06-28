@@ -41,6 +41,12 @@ Table of contents <br />
 	
 	The pipelined version implements the classical 5-Stage RISC pipeline [IF,ID,EX,MA,WB] and supports 
 	hazard detection and operand forwarding.
+	
+	### CPU Signle-Cycle
+	<img src="screenshots/cpu_sc.png/>
+	
+	### CPU 5-Stage-Pipelined
+	<img src="screenshots/cpu_5pl.png/>
 	 
 	   
 ## Memory <a name="memory"></a>
@@ -66,7 +72,9 @@ Table of contents <br />
 
 		To start data transfer any arbiray no zero value must to the start transfer strobe register 
 		the DMA halts the CPU until the transfer is completed. 
-
+		
+	<img src="screenshots/dma.png/>
+	
 ## PIA (Peripheral Interface Adapter) <a name="pia"></a>
 
 	Inspired by the 6522 PIA the new I/O interface provides a more felixable way for communication 
@@ -118,7 +126,7 @@ Table of contents <br />
 			*In both modes the timer countiues to increment until it stoped manulay be the user.
 			*The flag register is clear by reading the register value. 
 				
-		 	
+		 	<img src="screenshots/pia.png/>
 			
 ## Memory Map <a name="mmap"></a>
 	PIA
