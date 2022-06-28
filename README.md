@@ -3,13 +3,13 @@ An enhanced yet simplified version of the original RISC-V Computer
 
 ## Whats new?
 	1. Redesigned CPU with two versions to choose from
-		 Single-Cycle
-		 5-Stage-Pipelined
+	   Single-Cycle
+	   5-Stage-Pipelined
 	2. Simplified Main Memory module
 	3. DMA (Direct Memory Access)
 	4. Redesigned I/O Interface 
 
-Table of contents
+Table of contents <br />
 	1. [Motivation](#motivation)<br />
 	2. [CPU](#cpu)<br />
 	3. [Memory](#memory)<br />
