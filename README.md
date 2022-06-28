@@ -42,7 +42,7 @@ Table of contents <br />
 	The pipelined version implements the classical 5-Stage RISC pipeline [IF,ID,EX,MA,WB] and supports 
 	hazard detection and operand forwarding.
 	
-### CPU Signle-Cycle
+### CPU Single-Cycle
 <img src="screenshots/cpu_sc.png"/>
 	
 ### CPU 5-Stage-Pipelined
