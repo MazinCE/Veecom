@@ -97,7 +97,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 				1. Timer count (8-bit) holds current timer value
 				2. Timer compare (8-bit) used for comparison in compare mode
 				3. Timer control (8-bit) used to configure the timer
-				4. Timer Flag indicates timer overflow 
+				4. Timer Flag (8-bit) indicates timer overflow 
 			
 			    Timer control register	 	
 				[-][-][-][-][PS1][PS0][MOD][ST]
