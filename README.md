@@ -116,7 +116,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 				"10" divide clock by 3
 				"11" divide clock by 4
 			     
-			Contious-mode 
+			continuous-mode 
 				In this mode the timer increments until it overflows setting the Timer flag register to (0xFF)
 				then it wraps around to zero.
 				The timer can be loaded with any offset value at any time by writing to Timer count register.  
