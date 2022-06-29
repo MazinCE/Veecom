@@ -11,14 +11,14 @@ An enhanced yet simplified version of the original RISC-V-Computer
 	3. DMA (Direct Memory Access)
 	4. Redesigned I/O Interface 
 
-## Table of contents <br />
-	1. [Motivation](#motivation)<br />
-	2. [CPU](#cpu)<br />
-	3. [Memory](#memory)<br />
-	4. [DMA (Direct Memory Access)](#dma)<br />
-	5. [PIA (Peripheral Interface Adapter)](#pia)<br />
-	6. [Memory map](#mmap)<br />
-	7. [Loading a program](#program)<br />
+## Table of contents
+&emsp;1.[Motivation](#motivation)<br />
+&emsp;2. [CPU](#cpu)<br />
+&emsp;3. [Memory](#memory)<br />
+&emsp;4. [DMA (Direct Memory Access)](#dma)<br />
+&emsp;5. [PIA (Peripheral Interface Adapter)](#pia)<br />
+&emsp;6. [Memory map](#mmap)<br />
+&emsp;7. [Loading a program](#program)<br />
 
 ## Motivation <a name="motivation"></a>
 
