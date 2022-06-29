@@ -11,7 +11,7 @@ An enhanced yet simplified version of the original RISC-V-Computer
 	3. DMA (Direct Memory Access)
 	4. Redesigned I/O Interface 
 
-Table of contents <br />
+## Table of contents <br />
 	1. [Motivation](#motivation)<br />
 	2. [CPU](#cpu)<br />
 	3. [Memory](#memory)<br />
