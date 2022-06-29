@@ -1,8 +1,10 @@
 # RISC-V Computer 2.0 (RVCOM 2.0)
 An enhanced yet simplified version of the original RISC-V-Computer
 
-<img src="screenshots/computer.png"/>
-
+<p align="center">
+	<img src="screenshots/computer.png"/>
+</p>
+	
 ## Whats new?
 	1. Redesigned CPU with two versions to choose from
 	   Single-Cycle
