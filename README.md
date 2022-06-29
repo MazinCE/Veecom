@@ -69,7 +69,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 			3. Start transfer strobe
 		
 		In order to set the address register correctly the 20-bit block address must be 
-		sent to DMA as three successive byte writes this also implies to the 16-bit 
+		written to DMA as three successive byte writes this also implies to the 16-bit 
 		-block address register where two successive byte write must be made.
 
 		To start data transfer any arbitrary non zero value must be written to transfer strobe register. 
