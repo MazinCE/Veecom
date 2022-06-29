@@ -72,7 +72,7 @@ An enhanced yet simplified version of the original RISC-V-Computer
 		sent to DMA as three successive byte writes this also implies to the 16-bit 
 		block address register where two successive byte write must be made.
 
-		To start data transfer any arbitrary no zero value must to the start transfer strobe register 
+		To start data transfer any arbitrary non zero value must to the start transfer strobe register 
 		the DMA halts the CPU until the transfer is completed. 
 		
 <img src="screenshots/dma.png"/>
