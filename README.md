@@ -81,13 +81,14 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 
 	Inspired by the 6522 PIA the new I/O interface provides a more flexible way for communication 
 	with I/O devices featuring
-		* Two perbit programmable 8-bit I/O ports (PRA, PRB) where each bit can be configured
+	
+		1. Two perbit programmable 8-bit I/O ports (PRA, PRB) where each bit can be configured
 		  as Input or Output individualy by writing the data direction registers (DDRA,DDRB), 
 		  writing a value to DDR sets the corresponding bit as either read only or write only
 			"1" Write only
 			"0" Read only
    
-		* progrmmable 8-bit time with clock prescaler(divide by 1,2,3,4) and two operation modes
+		2. A progrmmable 8-bit timer with clock prescaler(divide by 1,2,3,4) and two operation modes
 			* continuous-mode
 			* Compare-mode
 		
@@ -132,6 +133,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 			
 ## Memory Map <a name="mmap"></a>
 	PIA
+		0xFFFF7		TIMER_FLAG    (R)
 		0xFFFF6		TIMER_CONTROL (R/W)
 		0xFFFF5		TIMER_COMPARE (W)
 		0xFFFF4		TIMER_COUNT   (R/W)
