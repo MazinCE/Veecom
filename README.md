@@ -64,9 +64,9 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	
 	How to use
 		The DMA contains three main registers 
-			1. Block address register (20-bit)
-			2. Block size register (16-bit)
-			3. Start transfer strobe
+			1. Block address (20-bit)
+			2. Block size (16-bit)
+			3. Start transfer (strobe)
 		
 		In order to set the address register correctly the 20-bit block address must be 
 		written to DMA as three successive byte writes this also implies to the 16-bit 
@@ -97,7 +97,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 				1. Timer count (8-bit) holds current timer value
 				2. Timer compare (8-bit) used for comparison in compare mode
 				3. Timer control (8-bit) used to configure the timer
-				4. Timer Flag (overflow) Register
+				4. Timer Flag indicates timer overflow 
 			
 			    Timer control register	 	
 				[-][-][-][-][PS1][PS0][MOD][ST]
@@ -107,7 +107,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 				"1" start
 
 			   MOD: Timer mode (bit1)
-				"0" contious
+				"0" continuous
 				"1" compare
 			
 			   PS1-PS0: Timer prescaler
