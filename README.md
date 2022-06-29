@@ -1,5 +1,5 @@
 # RISC-V Computer 2.0 (RVCOM 2.0)
-An enhanced yet simplified version of the original RISC-V-Computer
+An enhanced yet simplified version of the original RISC-V-Computer.
 
 <p align="center">
 	<img src="screenshots/computer.png"/>
@@ -15,22 +15,22 @@ An enhanced yet simplified version of the original RISC-V-Computer
 
 ## Table of contents
 &emsp;1.[Motivation](#motivation)<br />
-&emsp;2. [CPU](#cpu)<br />
-&emsp;3. [Memory](#memory)<br />
-&emsp;4. [DMA (Direct Memory Access)](#dma)<br />
-&emsp;5. [PIA (Peripheral Interface Adapter)](#pia)<br />
-&emsp;6. [Memory map](#mmap)<br />
-&emsp;7. [Loading a program](#program)<br />
+&emsp;2.[CPU](#cpu)<br />
+&emsp;3.[Memory](#memory)<br />
+&emsp;4.[DMA (Direct Memory Access)](#dma)<br />
+&emsp;5.[PIA (Peripheral Interface Adapter)](#pia)<br />
+&emsp;6.[Memory map](#mmap)<br />
+&emsp;7.[Loading a program](#program)<br />
 
 ## Motivation <a name="motivation"></a>
 
 	The original RISC-V Computer was intended to be a practical approach for understanding computer
 	organization and architecture with the help of RISC-V ISA, however the design was overly
 	complicated and hard to understand, a matter of fact, understanding how the CPU works will 
-	require hours of reverse engineering work neitherless to say the main memory moudule was unnecessarily
-	large being 128MB in size divide in 8 diffrent 16MB sized banks and most of all no documentation.
+	require hours of reverse engineering work and with a main memory moudule that was unnecessarily
+	large being 128MB in size divide as 8(eight) 16MB sized banks and most of all no documentation.
 	
-	I've made sevral attempts to simplify the orignal design but all ended up failing mainly due to the way
+	I have made several attempts to simplify the orignal design but all ended up failing, mainly due to the way
  	the original CPU was designed and implemented "RTL style" so a complete redesign was the only way to go.
  
 ## CPU <a name="cpu"></a>
@@ -68,34 +68,34 @@ An enhanced yet simplified version of the original RISC-V-Computer
 			2. Block size register (16-bit)
 			3. Start transfer strobe
 		
-		in order to set the address register correctly the 20-bit block address must be 
+		In order to set the address register correctly the 20-bit block address must be 
 		sent to DMA as three successive byte writes this also implies to the 16-bit 
-		block address register where two successive byte write must be made.
+		-block address register where two successive byte write must be made.
 
-		To start data transfer any arbitrary non zero value must to the start transfer strobe register 
-		the DMA halts the CPU until the transfer is completed. 
+		To start data transfer any arbitrary non zero value must be written to transfer strobe register. 
+		the DMA halts the CPU until data transfer is completed. 
 		
 <img src="screenshots/dma.png"/>
 	
 ## PIA (Peripheral Interface Adapter) <a name="pia"></a>
 
-	Inspired by the 6522 PIA the new I/O interface provides a more felixable way for communication 
-	with I/O devices having
+	Inspired by the 6522 PIA the new I/O interface provides a more flexible way for communication 
+	with I/O devices featuring
 		* Two perbit programmable 8-bit I/O ports (PRA, PRB) where each bit can be configured
-		  as Input or Output individualy by writing to data direction registers (DDRA,DDRB), 
-		  writing a value to DDR sets the corrosponding bit as either read only or write only
+		  as Input or Output individualy by writing the data direction registers (DDRA,DDRB), 
+		  writing a value to DDR sets the corresponding bit as either read only or write only
 			"1" Write only
 			"0" Read only
    
-		* progrmmable 8-bit time with clock prescaler(divide by 1,2,3,4) and two opration modes
-			* Continuos-mode
+		* progrmmable 8-bit time with clock prescaler(divide by 1,2,3,4) and two operation modes
+			* continuous-mode
 			* Compare-mode
 		
 			How to use
 			    The timer contains four registers
-				1. Timer count (8-bit) contains current timer value
-				2. Timer compare (8-bit) used for comparition in compare mode
-				3. Timer control (8-bit)	used to configure the timer
+				1. Timer count (8-bit) holds current timer value
+				2. Timer compare (8-bit) used for comparison in compare mode
+				3. Timer control (8-bit) used to configure the timer
 				4. Timer Flag (overflow) Register
 			
 			    Timer control register	 	
@@ -116,16 +116,16 @@ An enhanced yet simplified version of the original RISC-V-Computer
 				"11" divide clock by 4
 			     
 			Contious-mode 
-				In this mode the timer increments until it overflows setting the Timer flag to (0xFF)
+				In this mode the timer increments until it overflows setting the Timer flag register to (0xFF)
 				then it wraps around to zero.
 				The timer can be loaded with any offset value at any time by writing to Timer count register.  
 			
 			Compare-mode
-				In this mode the count register value is compare with the comare register, if they match
+				In this mode the count register value is compared with the compare register, if they match
 				the Timer flag is set to (0xFF) and the timer count register is reset to back zero.
 			
 			
-			*In both modes the timer countiues to increment until it stoped manulay be the user.
+			*In both modes the timer continue to increment until it stopped manually be the programmer.
 			*The flag register is clear by reading the register value. 
 				
 <img src="screenshots/pia.png"/>
