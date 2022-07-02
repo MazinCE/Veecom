@@ -5,7 +5,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	<img src="screenshots/computer.png"/>
 </p>
 	
-## Whats new?
+## What's new?
 	1. Redesigned CPU with two versions to choose from
 	   Single-Cycle
 	   5-Stage-Pipelined
