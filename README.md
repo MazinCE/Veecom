@@ -27,7 +27,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	The original RISC-V Computer was intended to be a practical approach for understanding computer
 	organization and architecture with the help of RISC-V ISA, however the design was overly
 	complicated and hard to understand, a matter of fact, understanding how the CPU works will 
-	require hours of reverse engineering work, worse yet a main memory moudule that was unnecessarily
+	require hours of reverse engineering work, worse yet, the main memory moudule was unnecessarily
 	large being 128MB in size divide as 8(eight) 16MB sized banks and most of all no documentation.
 	
 	I have made several attempts to simplify the orignal design but all ended up failing, mainly due to the way
