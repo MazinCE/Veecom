@@ -44,10 +44,10 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	The pipelined version implements the classical 5-Stage RISC pipeline [IF,ID,EX,MA,WB] and supports 
 	hazard detection and operand forwarding.
 	
-### CPU Single-Cycle
+### Single-Cycle
 <img src="screenshots/cpu_sc.png"/>
-	
-### CPU 5-Stage-Pipelined
+
+### 5-Stage-Pipelined
 <img src="screenshots/cpu_5pl.png" />
 	 
 	   
