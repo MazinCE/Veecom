@@ -79,7 +79,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	
 ## PIA (Peripheral Interface Adapter) <a name="pia"></a>
 
-	Inspired by the 6522 PIA the new I/O interface provides a more flexible way for communication 
+	Inspired by the 6522 PIA the new I/O interface provides a more flexible way for interacting 
 	with I/O devices featuring
 	
 		1. Two perbit programmable 8-bit I/O ports (PRA, PRB) where each bit can be configured
