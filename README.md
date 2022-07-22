@@ -148,7 +148,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 		0xFFFFA		START_TRANSFER_STROBE (W)
 	
 	Main Memory 
-		0xffeff-0x00000 (can be configured by linker file)	
+		0xFFEFF-0x00000 (can be configured by linker file)	
 	
 
 ## Loading a program <a name="program"></a>
