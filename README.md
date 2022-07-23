@@ -66,6 +66,8 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 
 	The simplified main memory module has been downgraded to 20-bit address space providing
 	1MB access for both code and data. 
+	
+<img src="screenshots/memory.png" />
 
 ## DMA (Direct Memory Access) <a name="dma"></a>
 
