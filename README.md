@@ -26,7 +26,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 
 	The original RISC-V Computer was intended to be a practical approach for understanding computer
 	organization and architecture with the help of RISC-V ISA, however the design was overly
-	complicated and hard to understand, a matter of fact, understanding how the CPU works will 
+	complicated and hard to understand in fact understanding how the CPU works will 
 	require hours of reverse engineering work, worse yet, the main memory moudule was unnecessarily
 	large being 128MB in size divide as 8(eight) 16MB sized banks and most of all no documentation.
 	
@@ -54,11 +54,11 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	One case where forwarding cannot help eliminate hazards is when an instruction
 	tries to read a register following a load instruction that writes the same register.
 	The data is still being read from memory in clock cycle 4 while the ALU is performing
-	the operation for the following instruction. Something must stall the pipeline for the
+	the operation for the following instruction. hence we must stall the pipeline for the
 	combination of load followed by an instruction that reads its result.
 	
-	But this is not considered an issue in our design since all memory instructions
-	already stall the CPU for one cycle due to single memory design. So no need to 
+	But this is not considered an issue in our design, since all memory instructions
+	already stall the CPU for one clock cycle due to single memory design. So no need to 
 	add any more logic to the Hazard unit regarding that case.  	
 #####   [More about forwarding here](https://www.cs.umd.edu/~meesh/411/CA-online/chapter/handling-data-hazards/index.html)
 	
