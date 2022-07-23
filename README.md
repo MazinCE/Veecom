@@ -28,7 +28,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	organization and architecture with the help of RISC-V ISA, however the design was overly
 	complicated and hard to understand in fact understanding how the CPU works will 
 	require hours of reverse engineering work, worse yet, the main memory moudule was unnecessarily
-	large being 128MB in size divide as 8(eight) 16MB sized banks and most of all no documentation.
+	large being 128MB in size divide as 8(eight) 16MB sized banks and worst of all, no design documentation.
 	
 	I have made several attempts to simplify the orignal design but all ended up failing, mainly due to the way
  	the original CPU was designed and implemented "RTL style" so a complete redesign was the only way to go.
