@@ -50,7 +50,18 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 ### 5-Stage-Pipelined
 <img src="screenshots/cpu_5pl.png" />
 	 
-	   
+### A note about forwarding
+	One case where forwarding cannot help eliminate hazards is when an instruction
+	tries to read a register following a load instruction that writes the same register.
+	The data is still being read from memory in clock cycle 4 while the ALU is performing
+	the operation for the following instruction. Something must stall the pipeline for the
+	combination of load followed by an instruction that reads its result.
+	
+	But this is not considered an issue in our design since all memory instructions
+	already stall the CPU for one cycle due to single memory design. So no need to 
+	add any more logic to the Hazard unit regarding that case.  	
+#####   [More about forwarding here](https://www.cs.umd.edu/~meesh/411/CA-online/chapter/handling-data-hazards/index.html)
+	
 ## Memory <a name="memory"></a>
 
 	The simplified main memory module has been downgraded to 20-bit address space providing
