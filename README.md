@@ -1,4 +1,4 @@
-# RISC-V Computer 2.0 (RVCOM 2.0)
+# RISC-V Computer 2.0
 An enhanced yet simplified version of the original RISC-V-Computer.
 
 <p align="center">
