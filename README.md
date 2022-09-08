@@ -2,7 +2,8 @@
 An enhanced yet simplified version of the original RISC-V-Computer.
 
 <p align="center">
-	<img src="screenshots/computer.png"/>
+	<img src="gifs/shunting_yard_demo.gif"/>
+	<img src="gifs/led_matrix_demo.gif"/>
 </p>
 	
 ## What's new?
