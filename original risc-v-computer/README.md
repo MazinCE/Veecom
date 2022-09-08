@@ -1,5 +1,5 @@
 # RISC-V-Computer
-A simplified computer built in Logisim capable of running C/C++ programs.
+A simplified computer build with Logisim capable of running C/C++ programs.
 
 <img src="demo.png"/>
 
