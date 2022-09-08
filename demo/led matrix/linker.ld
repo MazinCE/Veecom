@@ -9,7 +9,6 @@ MEMORY
 SECTIONS
 {
     __stack_size = 4K;
-    PROVIDE(__stack_size = __stack_size);
 
     .init :
     {
@@ -25,7 +24,7 @@ SECTIONS
     .data :
     {
         *(.data)
-        PROVIDE( __global_pointer$ = . + 0x800 );
+        PROVIDE( __global_pointer$ = .);
     } > RAM
 
     .bss :
@@ -33,8 +32,8 @@ SECTIONS
         *(.bss)
     }
 
-    .stack ORIGIN(RAM) + LENGTH(RAM) - __stack_size - 0xff :
+    .stack ORIGIN(RAM) + LENGTH(RAM) - __stack_size :
     {
-        PROVIDE( _sp = . ); 
+        PROVIDE( _sp = .); 
     } >RAM
 }

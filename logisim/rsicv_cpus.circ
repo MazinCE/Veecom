@@ -52,7 +52,7 @@
     <a name="appearance" val="custom"/>
     <a name="circuit" val="cpu_single_cycle"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="2048000.0"/>
+    <a name="simulationFrequency" val="64.0"/>
     <appear>
       <rect fill="#342f57" height="90" rx="3" ry="3" stroke="#000000" width="90" x="60" y="50"/>
       <rect fill="#fbfe65" height="62" rx="1" ry="1" stroke="none" width="67" x="72" y="64"/>
@@ -437,16 +437,6 @@
     <comp lib="2" loc="(330,150)" name="Register">
       <a name="appearance" val="classic"/>
       <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(1000,243)" name="Text">
-      <a name="color" val="#ffffff"/>
-      <a name="font" val="SansSerif bolditalic 10"/>
-      <a name="text" val="A"/>
-    </comp>
-    <comp lib="3" loc="(1019,383)" name="Text">
-      <a name="color" val="#ffffff"/>
-      <a name="font" val="SansSerif bolditalic 10"/>
-      <a name="text" val="B"/>
     </comp>
     <comp lib="4" loc="(1590,400)" name="Multiplexer">
       <a name="facing" val="south"/>
@@ -1541,6 +1531,11 @@ xxx10 0000 # LUI
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(290,630)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(290,630)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="bit1" val="0"/>
       <a name="bit10" val="0"/>
@@ -1575,11 +1570,6 @@ xxx10 0000 # LUI
       <a name="bit9" val="0"/>
       <a name="incoming" val="32"/>
       <a name="spacing" val="2"/>
-    </comp>
-    <comp lib="0" loc="(290,630)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="32"/>
-      <a name="incoming" val="32"/>
     </comp>
     <comp lib="0" loc="(480,890)" name="Splitter">
       <a name="appear" val="right"/>
@@ -5009,14 +4999,12 @@ xxx10 0000 # LUI
       <a name="label" val="cclk"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(360,460)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
     <comp lib="1" loc="(370,360)" name="AND Gate">
       <a name="negate1" val="true"/>
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(420,470)" name="OR Gate">
+      <a name="negate0" val="true"/>
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(580,490)" name="AND Gate">
@@ -5032,8 +5020,7 @@ xxx10 0000 # LUI
     <wire from="(280,500)" to="(550,500)"/>
     <wire from="(310,350)" to="(310,460)"/>
     <wire from="(310,350)" to="(340,350)"/>
-    <wire from="(310,460)" to="(340,460)"/>
-    <wire from="(360,460)" to="(390,460)"/>
+    <wire from="(310,460)" to="(380,460)"/>
     <wire from="(370,360)" to="(460,360)"/>
     <wire from="(420,470)" to="(460,470)"/>
     <wire from="(460,360)" to="(460,370)"/>

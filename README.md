@@ -142,5 +142,5 @@ Table of contents
 	Linker file and startup code must configured correctly take a look at the included demo.
 	Load the generated binary file to the memory module.
 	
-Tested in Logisim-evolution v3.7.2	
-	
+Tested in Logisim-evolution v3.7.2
+
