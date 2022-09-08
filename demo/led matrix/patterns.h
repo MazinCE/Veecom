@@ -1,9 +1,9 @@
-#ifndef PATTRENS_H
-#define PATTRENS_H
+#ifndef PATTERNS_H
+#define PATTERNS_H
 
 #include <stdint.h>
 
-const uint8_t PATTREN_NUMBERS[] = {
+const uint8_t PATTERN_NUMBERS[] = {
 
     0b00000000,
     0b00011000,
@@ -96,7 +96,7 @@ const uint8_t PATTREN_NUMBERS[] = {
     0b00111100,
 };
 
-const uint8_t PATTREN_LETTERS[] = {
+const uint8_t PATTERN_LETTERS[] = {
 
     0b00000000,
     0b00111100,
@@ -576,7 +576,7 @@ const uint8_t PATTREN_LETTERS[] = {
     0b00111100,
 };
 
-const uint8_t PATTREN_ANIMATION[] = {
+const uint8_t PATTERN_ANIMATION[] = {
 
     0b11111111,
     0b00000000,
@@ -723,18 +723,18 @@ const uint8_t PATTREN_ANIMATION[] = {
     0b11111111,
 };
 
-#define PATTREN_COUNT 3
+#define PATTERN_COUNT 3
 
-const uint8_t *PATTRENS[PATTREN_COUNT] = {
-    PATTREN_ANIMATION,
-    PATTREN_LETTERS,
-    PATTREN_NUMBERS,
+const uint8_t *PATTERNS[PATTERN_COUNT] = {
+    PATTERN_ANIMATION,
+    PATTERN_LETTERS,
+    PATTERN_NUMBERS,
 };
 
-const int PATTREN_SIZE[PATTREN_COUNT] = {
-    sizeof(PATTREN_ANIMATION),
-    sizeof(PATTREN_LETTERS),
-    sizeof(PATTREN_NUMBERS),
+const int PATTERN_SIZE[PATTERN_COUNT] = {
+    sizeof(PATTERN_ANIMATION),
+    sizeof(PATTERN_LETTERS),
+    sizeof(PATTERN_NUMBERS),
 };
 
 #endif
