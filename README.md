@@ -3,7 +3,6 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 
 <p align="center">
 	<img src="gifs/shunting_yard_demo.gif"/>
-	<img src="gifs/led_matrix_demo.gif"/>
 </p>
 	
 ## What's new?
@@ -22,6 +21,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 * [PIA (Peripheral Interface Adapter)](#pia)<br />
 * [Memory map](#mmap)<br />
 * [Loading a program](#program)<br />
+* [Demo](#demo)<br />
 
 ## Motivation <a name="motivation"></a>
 
@@ -169,6 +169,13 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	You'll need a RISC-V C/C++ compiler, I personaly use this one for my windows machine https://gnutoolchains.com/risc-v/
 	Linker file and startup code must configured correctly take a look at the included demo.
 	Load the generated binary file to the memory module.
-	
+
+## Demo
+
+<p align="center">
+	<img src="gifs/shunting_yard_demo.gif"/>
+	<img src="gifs/led_matrix_demo.gif"/>
+</p>
+
 Tested in Logisim-evolution v3.7.2	
 	
