@@ -36,9 +36,9 @@ An enhanced yet simplified version of the original RISC-V-Computer.
  
 ## CPU <a name="cpu"></a>
 
-	Completely redesigned, the new simplified design has a smaller footprint based on
-	Von Neumann arhitecture and both CPUs implements the RV32IM extentions.
-	it also features hold-holdacknowledge mechanism for DMA support.
+	Completely redesigned, the new simplified design has a smaller footprint.
+	Based on Von Neumann architecture and both CPUs implements the RV32IM extensions.              
+	it also features hold-hold acknowledge mechanism for DMA support
 	When the hld pin is asserted the CPU sets the hlda signal if it's not currently executing
 	any memory related instruction. 
 	
