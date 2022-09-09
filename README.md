@@ -73,7 +73,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 ## DMA (Direct Memory Access) <a name="dma"></a>
 
 	The block transfer memory-to-io DMA is the killer new feature! providing blazing fast
-	data transfer with speeds up to 280 byte/s (ON MY MACHINE) and can transfer up to 64KB
+	data transfer with speeds up to 280 byte/s (speed is host machine dependent) and can transfer up to 64KB
 	worth of data.
 	
 	How to use
