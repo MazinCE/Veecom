@@ -28,10 +28,10 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	The original RISC-V Computer was intended to be a practical approach for understanding computer
 	organization and architecture with the help of RISC-V ISA, however the design was overly
 	complicated and hard to understand in fact understanding how the CPU works will 
-	require hours of reverse engineering work, worse yet, the main memory moudule was unnecessarily
+	require hours of reverse engineering work, worse yet, the main memory module was unnecessarily
 	large being 128MB in size divide as 8(eight) 16MB sized banks and worst of all, no design documentation.
 	
-	I have made several attempts to simplify the orignal design but all ended up failing, mainly due to the way
+	I have made several attempts to simplify the original design but all ended up failing, mainly due to the way
  	the original CPU was designed and implemented "RTL style" so a complete redesign was the only way to go.
  
 ## CPU <a name="cpu"></a>
@@ -42,7 +42,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	When the hld pin is asserted the CPU sets the hlda signal if it's not currently executing
 	any memory related instruction. 
 	
-	The pipelined version implements the classical 5-Stage RISC pipeline [IF,ID,EX,MA,WB] and supports 
+	The pipelined version implements the classical 5-Stage RISC pipeline [IF, ID, EX, MA, WB] and supports 
 	hazard detection and operand forwarding.
 	
 ### Single-Cycle
@@ -73,7 +73,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 ## DMA (Direct Memory Access) <a name="dma"></a>
 
 	The block transfer memory-to-io DMA is the killer new feature! providing blazing fast
-	data transfer with speeds up to 280 byte/s (speed is host machine dependent) and can transfer up to 64KB
+	data transfer with speeds up to 280 bytes/s (speed is host machine dependent) and can transfer up to 64KB
 	worth of data.
 	
 	How to use
@@ -93,16 +93,16 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	
 ## PIA (Peripheral Interface Adapter) <a name="pia"></a>
 
-	Inspired by the 6522 PIA the new I/O interface provides a more flexible way for interacting 
-	with I/O devices featuring
+	Inspired by the 6522 PIA the new I/O interface provides a more flexible way for interfacing
+	I/O devices. featuring
 	
-		1. Two perbit programmable 8-bit I/O ports (PRA, PRB) where each bit can be configured
-		  as Input or Output individualy by writing the data direction registers (DDRA,DDRB), 
+		1. Two per bit programmable 8-bit I/O ports (PRA, PRB) where each bit can be configured
+		  as Input or Output individually by writing the data direction registers (DDRA, DDRB), 
 		  writing a value to DDR sets the corresponding bit as either read only or write only
 			"1" Write only
 			"0" Read only
    
-		2. A progrmmable 8-bit timer with clock prescaler(divide by 1,2,3,4) and two operation modes
+		2. A programmable 8-bit timer with clock prescaler (divide by 1,2,3,4) and two operation modes
 			* continuous-mode
 			* Compare-mode
 		
@@ -140,7 +140,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 				the Timer flag is set to (0xFF) and the timer count register is reset to back zero.
 			
 			
-			*In both modes the timer continue to increment until it stopped manually be the programmer.
+			*In both modes the timer continues to increment until it stopped manually be the programmer.
 			*The flag register is clear by reading the register value. 
 				
 <img src="screenshots/pia.png"/>
@@ -166,7 +166,7 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	
 
 ## Loading a program <a name="program"></a>
-	You'll need a RISC-V C/C++ compiler, I personaly use this one for my windows machine https://gnutoolchains.com/risc-v/
+	You'll need a RISC-V C/C++ compiler, I personally use this one for my windows machine https://gnutoolchains.com/risc-v/
 	Linker file and startup code must configured correctly take a look at the included demo.
 	Load the generated binary file to the memory module.
 
