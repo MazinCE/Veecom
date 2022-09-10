@@ -103,8 +103,8 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 			"0" Read only
    
 		2. A programmable 8-bit timer with clock prescaler (divide by 1,2,3,4) and two operation modes
-			* continuous-mode
-			* Compare-mode
+			 1. Continuous-mode
+			 2. Compare-mode
 		
 			How to use
 			    The timer contains four registers
@@ -140,8 +140,8 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 				the Timer flag is set to (0xFF) and the timer count register is reset to back zero.
 			
 			
-			*In both modes the timer continues to increment until it stopped manually be the programmer.
-			*The flag register is clear by reading the register value. 
+			In both modes the timer continues to increment until it stopped manually be the programmer.
+			The flag register is clear by reading the register value. 
 				
 <img src="screenshots/pia.png"/>
 			
@@ -164,7 +164,10 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	Main Memory 
 		0xFFEFF-0x00000 (can be configured by linker file)	
 	
-
+	(R/W) Read and write
+	(R)   Read only
+	(W)   Write only
+	
 ## Loading a program <a name="program"></a>
 	You'll need a RISC-V C/C++ compiler, I personally use this one for my windows machine https://gnutoolchains.com/risc-v/
 	Linker file and startup code must configured correctly take a look at the included demo.
