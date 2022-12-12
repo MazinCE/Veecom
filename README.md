@@ -168,11 +168,6 @@ An enhanced yet simplified version of the original RISC-V-Computer.
 	(R)   Read only
 	(W)   Write only
 	
-## Loading a program <a name="program"></a>
-	You'll need a RISC-V C/C++ compiler, I personally use this one for my windows machine https://gnutoolchains.com/risc-v/
-	Linker file and startup code must configured correctly take a look at the included demo.
-	Load the generated binary file to the memory module.
-
 ## Demo
 
 <p align="center">

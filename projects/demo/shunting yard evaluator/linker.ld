@@ -1,15 +1,14 @@
-OUTPUT(elf32-littleriscv)
+OUTPUT(riscv)
 ENTRY(_start)
 
 MEMORY
 {
-    RAM (rwx): ORIGIN = 0x0000000, LENGTH = 0x7FFFFFB
+    RAM (rwx): ORIGIN = 0x00000, LENGTH = 0xffeff
 }
 
 SECTIONS
 {
-    __stack_size = DEFINED(__stack_size) ? __stack_size : 1K;
-    PROVIDE(__stack_size = __stack_size);
+    __stack_size = 4K;
 
     .init :
     {
@@ -25,7 +24,7 @@ SECTIONS
     .data :
     {
         *(.data)
-        PROVIDE( __global_pointer$ = . + 0x800 );
+        PROVIDE( __global_pointer$ = .);
     } > RAM
 
     .bss :
@@ -35,7 +34,6 @@ SECTIONS
 
     .stack ORIGIN(RAM) + LENGTH(RAM) - __stack_size :
     {
-        . += __stack_size;
-        PROVIDE( _sp = . ); 
+        PROVIDE( _sp = .); 
     } >RAM
 }
