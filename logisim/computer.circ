@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.7.2" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.7.2(https://github.com/logisim-evolution/).
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Pin">
@@ -17,8 +17,8 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#Input/Output-Extra" name="7"/>
-  <lib desc="file#dma.circ" name="8"/>
-  <lib desc="file#rsicv_cpus.circ" name="9"/>
+  <lib desc="file#rsicv_cpus.circ" name="8"/>
+  <lib desc="file#dma.circ" name="9"/>
   <lib desc="file#pia.circ" name="10"/>
   <main name="main"/>
   <options>
@@ -102,12 +102,12 @@
       <a name="matrixcols" val="8"/>
       <a name="matrixrows" val="8"/>
     </comp>
-    <comp lib="6" loc="(475,428)" name="Text">
+    <comp lib="6" loc="(475,425)" name="Text">
       <a name="font" val="SansSerif bolditalic 12"/>
       <a name="text" val="Type Here"/>
     </comp>
-    <comp lib="8" loc="(190,220)" name="the_dma"/>
-    <comp lib="9" loc="(60,430)" name="cpu_single_cycle"/>
+    <comp lib="8" loc="(60,430)" name="cpu_5_stage_pipeline"/>
+    <comp lib="9" loc="(190,220)" name="the_dma"/>
     <comp loc="(190,370)" name="memory"/>
     <comp loc="(210,120)" name="mmap"/>
     <comp loc="(450,270)" name="matrix_driver"/>
@@ -219,14 +219,14 @@
       <text dominant-baseline="central" font-family="SansSerif" font-size="7" font-style="italic" font-weight="bold" text-anchor="middle" x="138" y="76">1MB</text>
       <rect fill="#fbfe65" height="100" stroke="none" width="3" x="146" y="89"/>
       <text dominant-baseline="central" font-family="SansSerif" font-size="8" font-style="italic" font-weight="bold" text-anchor="middle" x="139" y="66">RAM</text>
-      <circ-anchor facing="east" height="6" width="6" x="117" y="37"/>
-      <circ-port height="10" pin="770,200" width="10" x="115" y="45"/>
-      <circ-port height="8" pin="180,160" width="8" x="116" y="86"/>
-      <circ-port height="8" pin="180,180" width="8" x="116" y="76"/>
-      <circ-port height="8" pin="180,200" width="8" x="146" y="26"/>
-      <circ-port height="8" pin="190,140" width="8" x="116" y="66"/>
-      <circ-port height="8" pin="230,220" width="8" x="116" y="56"/>
-      <circ-port height="8" pin="230,90" width="8" x="116" y="36"/>
+      <circ-anchor facing="east" x="120" y="40"/>
+      <circ-port dir="in" pin="180,160" x="120" y="90"/>
+      <circ-port dir="in" pin="180,180" x="120" y="80"/>
+      <circ-port dir="in" pin="180,200" x="150" y="30"/>
+      <circ-port dir="in" pin="190,140" x="120" y="70"/>
+      <circ-port dir="in" pin="230,220" x="120" y="60"/>
+      <circ-port dir="in" pin="230,90" x="120" y="40"/>
+      <circ-port dir="out" pin="770,200" x="120" y="50"/>
     </appear>
     <comp lib="0" loc="(180,160)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -352,9 +352,6 @@
     <comp lib="1" loc="(280,130)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="1" loc="(280,160)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
     <comp lib="1" loc="(340,190)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
@@ -367,9 +364,10 @@
       <a name="enables" val="line"/>
       <a name="line" val="quad"/>
       <a name="misaligned" val="true"/>
+      <a name="trigger" val="falling"/>
       <a name="type" val="nonvolatile"/>
     </comp>
-    <wire from="(180,160)" to="(260,160)"/>
+    <wire from="(180,160)" to="(440,160)"/>
     <wire from="(180,180)" to="(310,180)"/>
     <wire from="(180,200)" to="(290,200)"/>
     <wire from="(190,140)" to="(200,140)"/>
@@ -380,7 +378,6 @@
     <wire from="(230,220)" to="(400,220)"/>
     <wire from="(230,90)" to="(300,90)"/>
     <wire from="(280,130)" to="(440,130)"/>
-    <wire from="(280,160)" to="(440,160)"/>
     <wire from="(290,200)" to="(290,240)"/>
     <wire from="(290,200)" to="(310,200)"/>
     <wire from="(290,240)" to="(750,240)"/>
@@ -414,11 +411,11 @@
       <rect fill="#fbfe65" height="28" rx="1" ry="1" stroke="none" width="29" x="76" y="36"/>
       <text dominant-baseline="central" font-family="SansSerif" font-size="6" font-style="italic" font-weight="bold" text-anchor="middle" x="90" y="49">MMAP</text>
       <polyline fill="#fbfe65" points="76,36 71,31" stroke="#fbfe65" stroke-width="2"/>
-      <circ-anchor facing="east" height="6" width="6" x="87" y="27"/>
-      <circ-port height="10" pin="480,580" width="10" x="75" y="65"/>
-      <circ-port height="10" pin="530,580" width="10" x="95" y="65"/>
-      <circ-port height="10" pin="580,580" width="10" x="85" y="25"/>
-      <circ-port height="8" pin="220,120" width="8" x="66" y="46"/>
+      <circ-anchor facing="east" x="90" y="30"/>
+      <circ-port dir="in" pin="220,120" x="70" y="50"/>
+      <circ-port dir="out" pin="480,580" x="80" y="70"/>
+      <circ-port dir="out" pin="530,580" x="100" y="70"/>
+      <circ-port dir="out" pin="580,580" x="90" y="30"/>
     </appear>
     <comp lib="0" loc="(220,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -588,16 +585,16 @@
     <a name="simulationFrequency" val="2048000.0"/>
     <appear>
       <rect height="21" rx="1" ry="1" stroke="#272727" stroke-width="3" width="89" x="80" y="50"/>
-      <circ-anchor facing="east" height="6" width="6" x="157" y="47"/>
-      <circ-port height="10" pin="440,170" width="10" x="155" y="45"/>
-      <circ-port height="8" pin="320,230" width="8" x="86" y="56"/>
-      <circ-port height="8" pin="350,230" width="8" x="96" y="56"/>
-      <circ-port height="8" pin="380,230" width="8" x="106" y="56"/>
-      <circ-port height="8" pin="410,230" width="8" x="116" y="56"/>
-      <circ-port height="8" pin="440,230" width="8" x="126" y="56"/>
-      <circ-port height="8" pin="470,230" width="8" x="136" y="56"/>
-      <circ-port height="8" pin="500,230" width="8" x="146" y="56"/>
-      <circ-port height="8" pin="530,230" width="8" x="156" y="56"/>
+      <circ-anchor facing="east" x="160" y="50"/>
+      <circ-port dir="in" pin="320,230" x="90" y="60"/>
+      <circ-port dir="in" pin="350,230" x="100" y="60"/>
+      <circ-port dir="in" pin="380,230" x="110" y="60"/>
+      <circ-port dir="in" pin="410,230" x="120" y="60"/>
+      <circ-port dir="in" pin="440,230" x="130" y="60"/>
+      <circ-port dir="in" pin="470,230" x="140" y="60"/>
+      <circ-port dir="in" pin="500,230" x="150" y="60"/>
+      <circ-port dir="in" pin="530,230" x="160" y="60"/>
+      <circ-port dir="out" pin="440,170" x="160" y="50"/>
     </appear>
     <comp lib="0" loc="(320,230)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -678,16 +675,16 @@
     <a name="simulationFrequency" val="2048000.0"/>
     <appear>
       <rect height="21" rx="1" ry="1" stroke="#272727" stroke-width="3" width="89" x="80" y="50"/>
-      <circ-anchor facing="east" height="6" width="6" x="157" y="47"/>
-      <circ-port height="10" pin="100,80" width="10" x="155" y="55"/>
-      <circ-port height="10" pin="130,80" width="10" x="145" y="55"/>
-      <circ-port height="10" pin="160,80" width="10" x="135" y="55"/>
-      <circ-port height="10" pin="190,80" width="10" x="125" y="55"/>
-      <circ-port height="10" pin="220,80" width="10" x="115" y="55"/>
-      <circ-port height="10" pin="250,80" width="10" x="105" y="55"/>
-      <circ-port height="10" pin="280,80" width="10" x="95" y="55"/>
-      <circ-port height="10" pin="310,80" width="10" x="85" y="55"/>
-      <circ-port height="8" pin="220,150" width="8" x="156" y="46"/>
+      <circ-anchor facing="east" x="160" y="50"/>
+      <circ-port dir="in" pin="220,150" x="160" y="50"/>
+      <circ-port dir="out" pin="100,80" x="160" y="60"/>
+      <circ-port dir="out" pin="130,80" x="150" y="60"/>
+      <circ-port dir="out" pin="160,80" x="140" y="60"/>
+      <circ-port dir="out" pin="190,80" x="130" y="60"/>
+      <circ-port dir="out" pin="220,80" x="120" y="60"/>
+      <circ-port dir="out" pin="250,80" x="110" y="60"/>
+      <circ-port dir="out" pin="280,80" x="100" y="60"/>
+      <circ-port dir="out" pin="310,80" x="90" y="60"/>
     </appear>
     <comp lib="0" loc="(100,80)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -776,18 +773,18 @@
       <rect fill="#342f57" height="90" rx="1" ry="1" stroke="#000000" width="50" x="50" y="50"/>
       <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="75" y="79">8X8</text>
       <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="8" font-style="italic" font-weight="bold" text-anchor="middle" x="74" y="93">Led Matrix</text>
-      <circ-anchor facing="east" height="6" width="6" x="97" y="57"/>
-      <circ-port height="10" pin="660,120" width="10" x="95" y="65"/>
-      <circ-port height="10" pin="660,190" width="10" x="95" y="75"/>
-      <circ-port height="10" pin="660,260" width="10" x="95" y="85"/>
-      <circ-port height="10" pin="660,330" width="10" x="95" y="95"/>
-      <circ-port height="10" pin="660,400" width="10" x="95" y="105"/>
-      <circ-port height="10" pin="660,470" width="10" x="95" y="115"/>
-      <circ-port height="10" pin="660,50" width="10" x="95" y="55"/>
-      <circ-port height="10" pin="660,540" width="10" x="95" y="125"/>
-      <circ-port height="8" pin="130,610" width="8" x="46" y="66"/>
-      <circ-port height="8" pin="130,630" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="200,540" width="8" x="46" y="56"/>
+      <circ-anchor facing="east" x="100" y="60"/>
+      <circ-port dir="in" pin="130,610" x="50" y="70"/>
+      <circ-port dir="in" pin="130,630" x="50" y="80"/>
+      <circ-port dir="in" pin="200,540" x="50" y="60"/>
+      <circ-port dir="out" pin="660,120" x="100" y="70"/>
+      <circ-port dir="out" pin="660,190" x="100" y="80"/>
+      <circ-port dir="out" pin="660,260" x="100" y="90"/>
+      <circ-port dir="out" pin="660,330" x="100" y="100"/>
+      <circ-port dir="out" pin="660,400" x="100" y="110"/>
+      <circ-port dir="out" pin="660,470" x="100" y="120"/>
+      <circ-port dir="out" pin="660,50" x="100" y="60"/>
+      <circ-port dir="out" pin="660,540" x="100" y="130"/>
     </appear>
     <comp lib="0" loc="(130,610)" name="Pin">
       <a name="appearance" val="NewPins"/>
