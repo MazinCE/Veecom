@@ -11,12 +11,12 @@
     * DMA
 */
 
-#define PRA 0xFFFF0
-#define PRB 0xFFFF2
+#define PRA  0xFFFF0
+#define PRB  0xFFFF2
 #define DDRA 0xFFFF1
 #define DDRB 0xFFFF3
 
-#define TIMER_CMP 0xFFFF5
+#define TIMER_CMP  0xFFFF5
 #define TIMER_CTRL 0xFFFF6
 #define TIMER_FLAG 0xFFFF7
 

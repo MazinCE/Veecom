@@ -18,8 +18,8 @@
   <lib desc="#Base" name="6"/>
   <lib desc="#Input/Output-Extra" name="7"/>
   <lib desc="file#rsicv_cpus.circ" name="8"/>
-  <lib desc="file#dma.circ" name="9"/>
-  <lib desc="file#pia.circ" name="10"/>
+  <lib desc="file#pia.circ" name="9"/>
+  <lib desc="file#dma.circ" name="10"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -57,7 +57,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="2048000.0"/>
+    <a name="simulationFrequency" val="64.0"/>
     <comp lib="0" loc="(140,550)" name="Clock"/>
     <comp lib="0" loc="(360,190)" name="Splitter">
       <a name="appear" val="center"/>
@@ -83,7 +83,7 @@
       <a name="facing" val="north"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="10" loc="(60,70)" name="pia"/>
+    <comp lib="10" loc="(190,220)" name="the_dma"/>
     <comp lib="5" loc="(170,570)" name="Button">
       <a name="facing" val="north"/>
       <a name="label" val="RESET"/>
@@ -106,8 +106,8 @@
       <a name="font" val="SansSerif bolditalic 12"/>
       <a name="text" val="Type Here"/>
     </comp>
-    <comp lib="8" loc="(60,430)" name="cpu_5_stage_pipeline"/>
-    <comp lib="9" loc="(190,220)" name="the_dma"/>
+    <comp lib="8" loc="(60,430)" name="cpu_single_cycle"/>
+    <comp lib="9" loc="(60,70)" name="pia"/>
     <comp loc="(190,370)" name="memory"/>
     <comp loc="(210,120)" name="mmap"/>
     <comp loc="(450,270)" name="matrix_driver"/>

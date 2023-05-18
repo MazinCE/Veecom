@@ -330,7 +330,7 @@
     <a name="appearance" val="custom"/>
     <a name="circuit" val="cpu_5_stage_pipeline"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="64.0"/>
+    <a name="simulationFrequency" val="2048000.0"/>
     <appear>
       <text dominant-baseline="central" font-family="SansSerif" font-size="6" font-style="italic" font-weight="bold" text-anchor="middle" x="131" y="98">RV32IM-sc</text>
       <rect fill="#342f57" height="90" rx="3" ry="3" stroke="#000000" width="90" x="90" y="60"/>
@@ -695,11 +695,11 @@
       <polygon fill="#342f57" points="170,21 260,87 260,155 170,220 170,159 190,143 190,99 170,80 170,42" stroke="#000000" stroke-width="2"/>
       <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="14" font-style="italic" font-weight="bold" text-anchor="middle" x="226" y="120">ALU</text>
       <circ-anchor facing="east" x="260" y="120"/>
-      <circ-port dir="in" pin="320,200" x="190" y="130"/>
-      <circ-port dir="in" pin="330,260" x="190" y="110"/>
-      <circ-port dir="in" pin="360,100" x="170" y="50"/>
-      <circ-port dir="in" pin="360,120" x="170" y="190"/>
-      <circ-port dir="in" pin="370,220" x="190" y="120"/>
+      <circ-port dir="in" pin="300,200" x="190" y="130"/>
+      <circ-port dir="in" pin="310,280" x="190" y="110"/>
+      <circ-port dir="in" pin="340,100" x="170" y="50"/>
+      <circ-port dir="in" pin="340,120" x="170" y="190"/>
+      <circ-port dir="in" pin="350,220" x="190" y="120"/>
       <circ-port dir="out" pin="1020,230" x="260" y="120"/>
     </appear>
     <comp lib="0" loc="(1020,230)" name="Pin">
@@ -710,35 +710,36 @@
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(320,200)" name="Pin">
+    <comp lib="0" loc="(300,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="op"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="0" loc="(330,260)" name="Pin">
+    <comp lib="0" loc="(310,280)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="func3"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(360,100)" name="Pin">
+    <comp lib="0" loc="(340,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="a"/>
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(360,120)" name="Pin">
+    <comp lib="0" loc="(340,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="b"/>
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(370,220)" name="Pin">
+    <comp lib="0" loc="(350,220)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="func7"/>
       <a name="width" val="7"/>
     </comp>
-    <comp lib="0" loc="(520,290)" name="Pull Resistor">
-      <a name="facing" val="east"/>
+    <comp lib="0" loc="(450,260)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(530,330)" name="Splitter">
       <a name="appear" val="center"/>
@@ -1004,10 +1005,6 @@
       <a name="fanout" val="1"/>
       <a name="incoming" val="33"/>
     </comp>
-    <comp lib="1" loc="(510,260)" name="Controlled Buffer">
-      <a name="control" val="left"/>
-      <a name="width" val="3"/>
-    </comp>
     <comp lib="1" loc="(640,580)" name="OR Gate">
       <a name="size" val="30"/>
       <a name="width" val="32"/>
@@ -1022,6 +1019,10 @@
     </comp>
     <comp lib="4" loc="(1010,230)" name="Multiplexer">
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(500,270)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="3"/>
     </comp>
     <comp lib="4" loc="(710,480)" name="Multiplexer">
       <a name="width" val="32"/>
@@ -1076,21 +1077,21 @@
     <comp lib="5" loc="(720,900)" name="Multiplier">
       <a name="width" val="33"/>
     </comp>
-    <comp loc="(480,200)" name="alu_ctrl"/>
+    <comp loc="(460,200)" name="alu_ctrl"/>
     <wire from="(1010,230)" to="(1020,230)"/>
-    <wire from="(320,200)" to="(380,200)"/>
-    <wire from="(330,260)" to="(490,260)"/>
-    <wire from="(360,100)" to="(570,100)"/>
-    <wire from="(360,120)" to="(560,120)"/>
-    <wire from="(370,220)" to="(380,220)"/>
-    <wire from="(480,200)" to="(550,200)"/>
-    <wire from="(480,210)" to="(540,210)"/>
-    <wire from="(480,220)" to="(530,220)"/>
-    <wire from="(480,230)" to="(500,230)"/>
-    <wire from="(500,230)" to="(500,250)"/>
-    <wire from="(510,260)" to="(520,260)"/>
-    <wire from="(520,260)" to="(520,290)"/>
-    <wire from="(520,290)" to="(520,310)"/>
+    <wire from="(300,200)" to="(360,200)"/>
+    <wire from="(310,280)" to="(470,280)"/>
+    <wire from="(340,100)" to="(570,100)"/>
+    <wire from="(340,120)" to="(560,120)"/>
+    <wire from="(350,220)" to="(360,220)"/>
+    <wire from="(450,260)" to="(470,260)"/>
+    <wire from="(460,200)" to="(550,200)"/>
+    <wire from="(460,210)" to="(540,210)"/>
+    <wire from="(460,220)" to="(530,220)"/>
+    <wire from="(460,230)" to="(480,230)"/>
+    <wire from="(480,230)" to="(480,250)"/>
+    <wire from="(500,270)" to="(520,270)"/>
+    <wire from="(520,270)" to="(520,310)"/>
     <wire from="(530,1090)" to="(920,1090)"/>
     <wire from="(530,220)" to="(530,310)"/>
     <wire from="(530,330)" to="(530,1090)"/>
@@ -1556,6 +1557,11 @@ xxx11 1000 # LUI
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(290,630)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(290,630)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="bit1" val="0"/>
       <a name="bit10" val="0"/>
@@ -1590,11 +1596,6 @@ xxx11 1000 # LUI
       <a name="bit9" val="0"/>
       <a name="incoming" val="32"/>
       <a name="spacing" val="2"/>
-    </comp>
-    <comp lib="0" loc="(290,630)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="32"/>
-      <a name="incoming" val="32"/>
     </comp>
     <comp lib="0" loc="(480,890)" name="Splitter">
       <a name="appear" val="right"/>
@@ -2555,7 +2556,7 @@ xxx11 1000 # LUI
       <circ-anchor facing="east" x="280" y="60"/>
       <circ-port dir="in" pin="160,470" x="220" y="260"/>
       <circ-port dir="in" pin="160,490" x="210" y="260"/>
-      <circ-port dir="in" pin="210,430" x="230" y="260"/>
+      <circ-port dir="in" pin="210,420" x="230" y="260"/>
       <circ-port dir="out" pin="160,350" x="200" y="260"/>
       <circ-port dir="out" pin="580,200" x="260" y="50"/>
       <circ-port dir="out" pin="580,220" x="270" y="50"/>
@@ -2586,7 +2587,11 @@ xxx11 1000 # LUI
       <a name="appearance" val="NewPins"/>
       <a name="label" val="rst"/>
     </comp>
-    <comp lib="0" loc="(210,430)" name="Pin">
+    <comp lib="0" loc="(190,440)" name="Constant">
+      <a name="value" val="0x13"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,420)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="instr_in"/>
       <a name="radix" val="16"/>
@@ -2764,12 +2769,20 @@ xxx11 1000 # LUI
       <a name="appearance" val="classic"/>
       <a name="width" val="32"/>
     </comp>
-    <comp loc="(270,430)" name="nop_pull"/>
+    <comp lib="3" loc="(102,445)" name="Text">
+      <a name="color" val="#0000f5"/>
+      <a name="text" val="nop"/>
+    </comp>
+    <comp lib="4" loc="(270,430)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="32"/>
+    </comp>
     <wire from="(160,350)" to="(250,350)"/>
     <wire from="(160,470)" to="(310,470)"/>
     <wire from="(160,490)" to="(320,490)"/>
-    <wire from="(210,430)" to="(230,430)"/>
-    <wire from="(250,350)" to="(250,420)"/>
+    <wire from="(190,440)" to="(240,440)"/>
+    <wire from="(210,420)" to="(240,420)"/>
+    <wire from="(250,350)" to="(250,410)"/>
     <wire from="(250,350)" to="(460,350)"/>
     <wire from="(270,430)" to="(300,430)"/>
     <wire from="(310,450)" to="(310,470)"/>
@@ -3380,10 +3393,10 @@ xxx11 1000 # LUI
       <text dominant-baseline="central" fill="#fcfcfc" font-family="SansSerif" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="64" y="257">ID</text>
       <text dominant-baseline="central" fill="#fcfcfc" font-family="SansSerif" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="64" y="242">|</text>
       <circ-anchor facing="east" x="80" y="90"/>
-      <circ-port dir="in" pin="270,90" x="50" y="220"/>
+      <circ-port dir="in" pin="270,70" x="50" y="220"/>
       <circ-port dir="in" pin="310,350" x="60" y="530"/>
       <circ-port dir="in" pin="310,370" x="70" y="530"/>
-      <circ-port dir="in" pin="320,110" x="50" y="210"/>
+      <circ-port dir="in" pin="330,100" x="50" y="210"/>
       <circ-port dir="in" pin="330,250" x="50" y="190"/>
       <circ-port dir="in" pin="330,320" x="50" y="90"/>
       <circ-port dir="out" pin="500,110" x="80" y="250"/>
@@ -3392,9 +3405,13 @@ xxx11 1000 # LUI
       <circ-port dir="out" pin="500,250" x="80" y="490"/>
       <circ-port dir="out" pin="500,320" x="80" y="480"/>
     </appear>
-    <comp lib="0" loc="(270,90)" name="Pin">
+    <comp lib="0" loc="(270,70)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="pc_en"/>
+    </comp>
+    <comp lib="0" loc="(310,120)" name="Constant">
+      <a name="value" val="0x13"/>
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(310,350)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -3404,7 +3421,7 @@ xxx11 1000 # LUI
       <a name="appearance" val="NewPins"/>
       <a name="label" val="clr"/>
     </comp>
-    <comp lib="0" loc="(320,110)" name="Pin">
+    <comp lib="0" loc="(330,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="instr_i"/>
       <a name="radix" val="16"/>
@@ -3497,7 +3514,7 @@ xxx11 1000 # LUI
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="1" loc="(340,90)" name="NOT Gate">
+    <comp lib="1" loc="(320,70)" name="NOT Gate">
       <a name="size" val="20"/>
     </comp>
     <comp lib="2" loc="(440,110)" name="Register">
@@ -3512,15 +3529,23 @@ xxx11 1000 # LUI
       <a name="appearance" val="classic"/>
       <a name="width" val="32"/>
     </comp>
-    <comp loc="(380,110)" name="nop_pull"/>
-    <wire from="(270,90)" to="(320,90)"/>
+    <comp lib="3" loc="(223,126)" name="Text">
+      <a name="color" val="#0000f5"/>
+      <a name="text" val="nop"/>
+    </comp>
+    <comp lib="4" loc="(380,110)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(270,70)" to="(300,70)"/>
+    <wire from="(310,120)" to="(350,120)"/>
     <wire from="(310,350)" to="(370,350)"/>
     <wire from="(310,370)" to="(380,370)"/>
-    <wire from="(320,110)" to="(340,110)"/>
+    <wire from="(320,70)" to="(360,70)"/>
+    <wire from="(330,100)" to="(350,100)"/>
     <wire from="(330,250)" to="(410,250)"/>
     <wire from="(330,320)" to="(410,320)"/>
-    <wire from="(340,90)" to="(360,90)"/>
-    <wire from="(360,90)" to="(360,100)"/>
+    <wire from="(360,70)" to="(360,90)"/>
     <wire from="(370,190)" to="(370,280)"/>
     <wire from="(370,190)" to="(420,190)"/>
     <wire from="(370,280)" to="(370,350)"/>
@@ -5064,133 +5089,5 @@ xxx11 1000 # LUI
     <wire from="(520,380)" to="(590,380)"/>
     <wire from="(520,480)" to="(540,480)"/>
     <wire from="(580,490)" to="(590,490)"/>
-  </circuit>
-  <circuit name="nop_pull">
-    <a name="appearance" val="custom"/>
-    <a name="circuit" val="nop_pull"/>
-    <a name="simulationFrequency" val="2048000.0"/>
-    <appear>
-      <rect fill="#342f57" height="21" rx="1" ry="1" stroke="#000000" stroke-width="2" width="40" x="120" y="60"/>
-      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="7" font-style="italic" font-weight="bold" text-anchor="middle" x="139" y="70">NOP Pull</text>
-      <circ-anchor facing="east" x="160" y="70"/>
-      <circ-port dir="in" pin="490,220" x="120" y="70"/>
-      <circ-port dir="in" pin="690,270" x="140" y="60"/>
-      <circ-port dir="out" pin="860,220" x="160" y="70"/>
-    </appear>
-    <comp lib="0" loc="(1000,150)" name="Pull Resistor">
-      <a name="pull" val="1"/>
-    </comp>
-    <comp lib="0" loc="(1020,150)" name="Pull Resistor">
-      <a name="pull" val="1"/>
-    </comp>
-    <comp lib="0" loc="(400,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(420,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(440,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(460,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(480,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(490,220)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="instr_in"/>
-      <a name="radix" val="16"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(500,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(520,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(540,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(560,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(580,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(600,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(620,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(640,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(660,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(680,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(690,270)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="label" val="nop"/>
-    </comp>
-    <comp lib="0" loc="(700,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(720,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(720,180)" name="Splitter">
-      <a name="appear" val="center"/>
-      <a name="facing" val="north"/>
-      <a name="fanout" val="32"/>
-      <a name="incoming" val="32"/>
-      <a name="spacing" val="2"/>
-    </comp>
-    <comp lib="0" loc="(740,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(760,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(780,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(800,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(820,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(840,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(860,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(860,220)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="instr_out"/>
-      <a name="output" val="true"/>
-      <a name="radix" val="16"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(880,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(900,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(920,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(940,150)" name="Pull Resistor">
-      <a name="pull" val="1"/>
-    </comp>
-    <comp lib="0" loc="(960,150)" name="Pull Resistor"/>
-    <comp lib="0" loc="(980,150)" name="Pull Resistor"/>
-    <comp lib="1" loc="(690,240)" name="NOT Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(700,220)" name="Controlled Buffer">
-      <a name="width" val="32"/>
-    </comp>
-    <wire from="(1000,150)" to="(1000,160)"/>
-    <wire from="(1020,150)" to="(1020,160)"/>
-    <wire from="(400,150)" to="(400,160)"/>
-    <wire from="(420,150)" to="(420,160)"/>
-    <wire from="(440,150)" to="(440,160)"/>
-    <wire from="(460,150)" to="(460,160)"/>
-    <wire from="(480,150)" to="(480,160)"/>
-    <wire from="(490,220)" to="(680,220)"/>
-    <wire from="(500,150)" to="(500,160)"/>
-    <wire from="(520,150)" to="(520,160)"/>
-    <wire from="(540,150)" to="(540,160)"/>
-    <wire from="(560,150)" to="(560,160)"/>
-    <wire from="(580,150)" to="(580,160)"/>
-    <wire from="(600,150)" to="(600,160)"/>
-    <wire from="(620,150)" to="(620,160)"/>
-    <wire from="(640,150)" to="(640,160)"/>
-    <wire from="(660,150)" to="(660,160)"/>
-    <wire from="(680,150)" to="(680,160)"/>
-    <wire from="(690,230)" to="(690,240)"/>
-    <wire from="(690,260)" to="(690,270)"/>
-    <wire from="(700,150)" to="(700,160)"/>
-    <wire from="(700,220)" to="(720,220)"/>
-    <wire from="(720,150)" to="(720,160)"/>
-    <wire from="(720,180)" to="(720,220)"/>
-    <wire from="(720,220)" to="(860,220)"/>
-    <wire from="(740,150)" to="(740,160)"/>
-    <wire from="(760,150)" to="(760,160)"/>
-    <wire from="(780,150)" to="(780,160)"/>
-    <wire from="(800,150)" to="(800,160)"/>
-    <wire from="(820,150)" to="(820,160)"/>
-    <wire from="(840,150)" to="(840,160)"/>
-    <wire from="(860,150)" to="(860,160)"/>
-    <wire from="(880,150)" to="(880,160)"/>
-    <wire from="(900,150)" to="(900,160)"/>
-    <wire from="(920,150)" to="(920,160)"/>
-    <wire from="(940,150)" to="(940,160)"/>
-    <wire from="(960,150)" to="(960,160)"/>
-    <wire from="(980,150)" to="(980,160)"/>
-  </circuit>
-  <circuit name="mul_div">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="mul_div"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="2048000.0"/>
   </circuit>
 </project>
