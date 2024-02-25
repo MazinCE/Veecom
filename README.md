@@ -21,6 +21,8 @@ Veecom is a 32-bit computer system that combines the simplicity of 8-bit home co
     <img src="screenshots/veecom.svg", alt="veecom">
 </figure>
 
+<br/>
+
 Architecture & Organization <a name="arch_orgi"></a>
 ---
 
@@ -30,6 +32,8 @@ The DMA Controller in Veecom is simpler in design and more compact, supporting u
 <figure align="center">
     <img src="screenshots/arch_orgi.svg", alt="arch_orgi">
 </figure>
+
+<br/>
 
 RISC-V CPU <a name="cpu"></a>
 ---
@@ -55,6 +59,8 @@ Veecom's CPUs are based on the RV32IM variant of the RISC-V ISA, implementing th
 <figure align="center">
     <img src="screenshots/cpu_pipeline.svg", alt="cpu_5pl">
 </figure>
+
+<br/>
 
 Versatile Interface Adapter (VIA) <a name="via"></a>
 ---
@@ -89,6 +95,7 @@ This 8-bit register controls the operation of the timer, the following figure li
 <figure align="center">
     <img src="screenshots/timer_ctrl.svg", alt="via">
 </figure>
+
 <br/>
 
 Direct Memory Access Controller (DMAC) <a name="dmac"></a>
@@ -103,6 +110,8 @@ The DMA Controller is designed for fast and efficient `memory-to-IO` data transf
 <figure align="center">
     <img src="screenshots/dmac.svg", alt="dmac">
 </figure>
+
+<br/>
 
 uBASIC <a name="ubasic"></a>
 ---
@@ -135,17 +144,22 @@ Veecom uBASIC added support for multiple new commands, these include `RUN`, `LIS
 
 For more details, please visit [Veecom uBASIC](https://github.com/MazinCE/Veecom-uBasic) repository. 
 
+<br/>
+
 ### Games <a name="games"></a>
+
+#### Lunar Lander (Apple 1 Version 1976)
 
 <figure align="center">
     <img src="screenshots/lunar_lander.png", alt="lander">
-    <figcaption> Lunar Lander (Apple 1 Version 1976)  </figcaption>
 </figure>
 <br />
+
+#### Hangman
 <figure align="center">
     <img src="screenshots/hangman.png", alt="hangman">
-     <figcaption> Hangman </figcaption>
 </figure>
+
 <br/>
 
 Memory Map <a name="mmap"></a>
