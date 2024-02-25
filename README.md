@@ -62,6 +62,10 @@ Versatile Interface Adapter (VIA) <a name="via"></a>
 Inspired by the MOS 6522 VIA, Veecom's VIA features several enhancements and improvements over its predecessor, featuring three 8-bit I/O ports `Port A`, `Port B` and `Port C` that can be used for both input and output without the need for data direction register, allowing for more flexible I/O access (Please refer to [Memory Map](#mmap) section for supported operations).
 Additionally, the VIA features a new 8-bit timer similar to Timer-1 found in the MOS 6522 VIA. it supports multiple operation frequencies (up to `f/16`, with `f/2` set as default) and two operations modes, `One-Shot` and `Free-Run`. 
 
+<figure align="center">
+    <img src="screenshots/via.svg", alt="via">
+</figure>
+
 #### Timer Operation
 
 The timer consists of an 8-bit latch and an 8-bit counter. The latch is responsible for storing the data that will be loaded into the counter. The Timer Control Register `TCR` is used to start/stop the timer, configure its operation mode, and set the running clock frequency. Additionally the I/O pin `PC7` can be programmed to invert on every time-out.
@@ -84,13 +88,8 @@ This 8-bit register controls the operation of the timer, the following figure li
 
 <figure align="center">
     <img src="screenshots/timer_ctrl.svg", alt="via">
-   <figcaption> Timer Control Register (TCR) </figcaption>
 </figure>
-
-<figure align="center">
-    <img src="screenshots/via.svg", alt="via">
-   <figcaption> Versatile Interface Adapter (VIA) </figcaption>
-</figure>
+<br/>
 
 Direct Memory Access Controller (DMAC) <a name="dmac"></a>
 ---
@@ -103,7 +102,6 @@ The DMA Controller is designed for fast and efficient `memory-to-IO` data transf
 
 <figure align="center">
     <img src="screenshots/dmac.svg", alt="dmac">
-   <figcaption> Direct Memory Access Controller (DMAC) </figcaption>
 </figure>
 
 uBASIC <a name="ubasic"></a>
