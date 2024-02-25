@@ -19,7 +19,6 @@ Veecom is a 32-bit computer system that combines the simplicity of 8-bit home co
 
 <figure align="center">
     <img src="screenshots/veecom.svg", alt="veecom">
-    <figcaption> Veecoms' Main View </figcaption>
 </figure>
 
 Architecture & Organization <a name="arch_orgi"></a>
@@ -30,7 +29,6 @@ The DMA Controller in Veecom is simpler in design and more compact, supporting u
 
 <figure align="center">
     <img src="screenshots/arch_orgi.svg", alt="arch_orgi">
-    <figcaption> Veecom's Block Diagram </figcaption>
 </figure>
 
 RISC-V CPU <a name="cpu"></a>
@@ -38,18 +36,24 @@ RISC-V CPU <a name="cpu"></a>
 
 Veecom's CPUs are based on the RV32IM variant of the RISC-V ISA, implementing the 32-bit base integer instruction set alongside the M-extension to support hardware multiplication and division. Additionally Veecom introduces a new Multi-Cycle CPU version, complementing the Single-Cycle and 5-Stage pipeline versions pre-existed in the RISC-V Computer 2.0. The new models feature signficant microarchitectural improvements, bug fixes and an overall cleaner design.
 
+#### Single-Cycle Version
+
 <figure align="center">
     <img src="screenshots/cpu_single_cycle.svg", alt="cpu_sc">
-   <figcaption> Single-Cycle Version </figcaption>
 </figure>
+<br/>
+
+#### Multi-Cycle Version
 
 <figure align="center">
     <img src="screenshots/cpu_multi_cycle.svg", alt="cpu_mc">
-   <figcaption> Multi-Cycle Version </figcaption>
 </figure>
+<br/>
+
+#### Pipelined Version
+
 <figure align="center">
     <img src="screenshots/cpu_pipeline.svg", alt="cpu_5pl">
-   <figcaption> Pipelined Version </figcaption>
 </figure>
 
 Versatile Interface Adapter (VIA) <a name="via"></a>
